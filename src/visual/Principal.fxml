@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="368.0" snapToPixel="false" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrincipalController">
+   <children>
+      <Pane prefHeight="398.0" prefWidth="368.0">
+         <children>
+            <MenuBar fx:id="MBPrincipal" prefHeight="29.0" prefWidth="368.0">
+              <menus>
+                <Menu fx:id="MCadastros" mnemonicParsing="false" text="Cadastros">
+                  <items>
+                    <MenuItem fx:id="MICadastroCliente" mnemonicParsing="false" onAction="#cadastros" text="Cliente" />
+                        <MenuItem fx:id="MICadastroFornecedor" mnemonicParsing="false" onAction="#cadastros" text="Fornecedor" />
+                        <MenuItem fx:id="MICadastroFuncionario" mnemonicParsing="false" onAction="#cadastros" text="Funcionario" />
+                        <MenuItem fx:id="MICadastroProduto" mnemonicParsing="false" onAction="#cadastros" text="Produto" />
+                  </items>
+                </Menu>
+                <Menu fx:id="MOperacoes" mnemonicParsing="false" text="Operações">
+                  <items>
+                    <MenuItem fx:id="MIOperacoesCompra" mnemonicParsing="false" onAction="#operacoes" text="Compra" />
+                        <MenuItem fx:id="MIOperacoesVenda" mnemonicParsing="false" onAction="#operacoes" text="Venda" />
+                  </items>
+                </Menu>
+                <Menu fx:id="MRelatorios" mnemonicParsing="false" text="Relatorios">
+                  <items>
+                    <MenuItem fx:id="MIRelatorioCliente" mnemonicParsing="false" onAction="#relatorios" text="Cliente" />
+                        <MenuItem fx:id="MIRelatorioFornecedor" mnemonicParsing="false" onAction="#relatorios" text="Fornecedor" />
+                        <MenuItem fx:id="MIRelatorioFuncionario" mnemonicParsing="false" onAction="#relatorios" text="Funcionario" />
+                        <MenuItem fx:id="MIRelatorioProduto" mnemonicParsing="false" onAction="#relatorios" text="Produto" />
+                        <MenuItem fx:id="MIRelatorioEstoque" mnemonicParsing="false" onAction="#relatorios" text="Estoque" />
+                        <MenuItem fx:id="MIRelatorioCompra" mnemonicParsing="false" onAction="#relatorios" text="Compra" />
+                        <MenuItem fx:id="MIRelatorioVenda" mnemonicParsing="false" onAction="#relatorios" text="Venda" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ImageView fitHeight="369.0" fitWidth="368.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/superJavaLogo.png" />
+               </image></ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

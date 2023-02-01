@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="superJava.jnlp">
+  <information>
+    <title>superJava</title>
+    <vendor>ulisses</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="superJava.jar" size="579462" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="controller.SuperJava"  name="superJava" />
+  <update check="always"/>
+</jnlp>

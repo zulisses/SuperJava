@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RelatoriosController">
+   <children>
+      <TabPane prefHeight="685.0" prefWidth="1287.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="tCliente" text="Cliente">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvCliente" prefHeight="652.0" prefWidth="1287.0" tableMenuButtonVisible="true">
+                          <columns>
+                              <TableColumn fx:id="tcClienteId" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="tcClienteNome" prefWidth="75.0" text="Nome" />
+                            <TableColumn fx:id="tcClienteCpf" prefWidth="24.0" text="CPF" />
+                              <TableColumn fx:id="tcClienteSexo" prefWidth="122.0" text="Sexo" />
+                              <TableColumn fx:id="tcClienteNascimento" prefWidth="112.0" text="Nascimento" />
+                              <TableColumn fx:id="tcClienteLimite" minWidth="0.0" prefWidth="71.0" text="Limite" />
+                              <TableColumn fx:id="tcClienteEmail" prefWidth="65.0" text="Email" />
+                              <TableColumn fx:id="tcClienteTelefone" prefWidth="77.0" text="Telefone" />
+                              <TableColumn fx:id="tcClienteUf" minWidth="0.0" prefWidth="34.0" text="UF" />
+                              <TableColumn fx:id="tcClienteCidade" prefWidth="132.0" text="Cidade" />
+                              <TableColumn fx:id="tcClienteBairro" prefWidth="75.0" text="Bairro" />
+                              <TableColumn fx:id="tcClienteRua" prefWidth="75.0" text="Rua" />
+                              <TableColumn fx:id="tcClienteNumero" prefWidth="75.0" text="Número" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tFornecedor" text="Fornecedor">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvFornecedor" prefHeight="652.0" prefWidth="1287.0" tableMenuButtonVisible="true">
+                           <columns>
+                              <TableColumn fx:id="tcFornecedorId" prefWidth="75.0" text="Id" />
+                              <TableColumn fx:id="tcFornecedorrazaoSocial" prefWidth="75.0" text="Razão Social" />
+                              <TableColumn fx:id="tcFornecedorNomeFantasia" prefWidth="75.0" text="Nome Fantasia" />
+                              <TableColumn fx:id="tcFornecedorCnpj" prefWidth="75.0" text="CNPJ" />
+                              <TableColumn fx:id="tcFornecedorRamo" prefWidth="75.0" text="Ramo" />
+                              <TableColumn fx:id="tcFornecedorEmail" prefWidth="65.0" text="Email" />
+                              <TableColumn fx:id="tcFornecedorTelefone" prefWidth="77.0" text="Telefone" />
+                              <TableColumn fx:id="tcFornecedorUf" minWidth="0.0" prefWidth="34.0" text="UF" />
+                              <TableColumn fx:id="tcFornecedorCidade" prefWidth="132.0" text="Cidade" />
+                              <TableColumn fx:id="tcFornecedorBairro" prefWidth="75.0" text="Bairro" />
+                              <TableColumn fx:id="tcFornecedorRua" prefWidth="75.0" text="Rua" />
+                              <TableColumn fx:id="tcFornecedorNumero" prefWidth="75.0" text="Número" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tFuncionario" text="Funcionario">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvFuncionario" prefHeight="652.0" prefWidth="1287.0" tableMenuButtonVisible="true">
+                           <columns>
+                              <TableColumn fx:id="tcFuncionarioId" prefWidth="75.0" text="Id" />
+                              <TableColumn fx:id="tcFuncionarioNome" prefWidth="75.0" text="Nome" />
+                              <TableColumn fx:id="tcFuncionarioCpf" prefWidth="24.0" text="CPF" />
+                              <TableColumn fx:id="tcFuncionarioSexo" prefWidth="122.0" text="Sexo" />
+                              <TableColumn fx:id="tcFuncionarioNascimento" prefWidth="112.0" text="Nascimento" />
+                              <TableColumn fx:id="tcFuncionarioCargo" prefWidth="75.0" text="Cargo" />
+                              <TableColumn fx:id="tcFuncionarioHoras" prefWidth="75.0" text="Horas" />
+                              <TableColumn fx:id="tcFuncionarioSalario" prefWidth="75.0" text="Salário" />
+                              <TableColumn fx:id="tcFuncionarioEmail" prefWidth="65.0" text="Email" />
+                              <TableColumn fx:id="tcFuncionarioTelefone" prefWidth="77.0" text="Telefone" />
+                              <TableColumn fx:id="tcFuncionarioUf" minWidth="0.0" prefWidth="34.0" text="UF" />
+                              <TableColumn fx:id="tcFuncionarioCidade" prefWidth="132.0" text="Cidade" />
+                              <TableColumn fx:id="tcFuncionarioBairro" prefWidth="75.0" text="Bairro" />
+                              <TableColumn fx:id="tcFuncionarioRua" prefWidth="75.0" text="Rua" />
+                              <TableColumn fx:id="tcFuncionarioNumero" prefWidth="75.0" text="Número" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tProduto" text="Produto">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvProduto" prefHeight="650.0" prefWidth="1287.0" tableMenuButtonVisible="true">
+                          <columns>
+                              <TableColumn fx:id="tcProdutoId" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="tcProdutoNome" prefWidth="75.0" text="Nome" />
+                            <TableColumn fx:id="tcProdutoMarca" prefWidth="75.0" text="Marca" />
+                              <TableColumn fx:id="tcProdutoValorCompra" prefWidth="75.0" text="Valor Compra" />
+                              <TableColumn fx:id="tcProdutoValorVenda" prefWidth="75.0" text="Valor Venda" />
+                              <TableColumn fx:id="tcProdutoValorPromocao" prefWidth="75.0" text="Valor Promoção" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tEstoque" text="Estoque">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvEstoque" prefHeight="649.0" prefWidth="1287.0" tableMenuButtonVisible="true">
+                          <columns>
+                              <TableColumn fx:id="tcEstoqueId" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="tcEstoqueNome" prefWidth="75.0" text="Nome" />
+                            <TableColumn fx:id="tcEstoqueMarca" prefWidth="75.0" text="Marca" />
+                              <TableColumn fx:id="tcEstoqueQuantidade" prefWidth="75.0" text="Quantidade" />
+                              <TableColumn fx:id="tcEstoqueValor" prefWidth="75.0" text="Valor" />
+                              <TableColumn fx:id="tcEstoqueSubTotal" prefWidth="75.0" text="Sub-Total" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab fx:id="tCompra" text="Compra">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvCompra" prefHeight="651.0" prefWidth="1287.0" tableMenuButtonVisible="true">
+                          <columns>
+                            <TableColumn fx:id="tcCompraId" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="tcCompraFuncionario" prefWidth="75.0" text="Funcionario" />
+                              <TableColumn fx:id="tcCompraFornecedor" prefWidth="75.0" text="Fornecedor" />
+                              <TableColumn fx:id="tcCompraData" prefWidth="75.0" text="Data" />
+                              <TableColumn fx:id="tcCompraFormaPagamento" prefWidth="75.0" text="Forma Pagamento" />
+                              <TableColumn fx:id="tcCompraDesconto" prefWidth="75.0" text="Desconto" />
+                              <TableColumn fx:id="tcCompraValorTotal" prefWidth="75.0" text="Valor Total" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tVenda" text="Venda">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvVenda" prefHeight="652.0" prefWidth="1287.0" tableMenuButtonVisible="true">
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <columns>
+                              <TableColumn fx:id="tcVendaId" prefWidth="75.0" text="Id" />
+                              <TableColumn fx:id="tcVendaFuncionario" prefWidth="75.0" text="Funcionario" />
+                              <TableColumn fx:id="tcVendaCliente" prefWidth="75.0" text="Cliente" />
+                              <TableColumn fx:id="tcVendaData" prefWidth="75.0" text="Data" />
+                              <TableColumn fx:id="tcVendaFormaPagamento" prefWidth="75.0" text="Forma Pagamento" />
+                              <TableColumn fx:id="tcVendaDesconto" prefWidth="75.0" text="Desconto" />
+                              <TableColumn fx:id="tcVendaValorTotal" prefWidth="75.0" text="Valor Total" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

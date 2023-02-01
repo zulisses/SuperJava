@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="407.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastrosController">
+   <children>
+      <TabPane prefHeight="572.0" prefWidth="558.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tCliente" text="Cliente">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="401.0" prefWidth="558.0">
+                     <children>
+                        <TitledPane collapsible="false" layoutY="67.0" prefHeight="67.0" prefWidth="558.0" text="Contato">
+                          <content>
+                            <AnchorPane fx:id="apClienteContato" minHeight="0.0" minWidth="0.0" prefHeight="78.0" prefWidth="343.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Email: " />
+                                    <Label layoutX="301.0" layoutY="14.0" text="Telefone: " />
+                                    <TextField fx:id="tfClienteEmail" disable="true" layoutX="69.0" layoutY="9.0" prefHeight="25.0" prefWidth="222.0" />
+                                    <TextField fx:id="tfClienteTelefone" disable="true" layoutX="366.0" layoutY="9.0" promptText="(**) *****-****" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane collapsible="false" layoutY="134.0" prefHeight="143.0" prefWidth="558.0" text="Endereço">
+                          <content>
+                            <AnchorPane fx:id="apClienteEndereco" minHeight="0.0" minWidth="0.0" prefHeight="132.0" prefWidth="556.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="UF: " />
+                                    <ComboBox fx:id="cbClienteUf" disable="true" layoutX="40.0" layoutY="9.0" prefHeight="25.0" prefWidth="75.0" />
+                                    <Label layoutX="134.0" layoutY="14.0" text="Cidade: " />
+                                    <Label layoutX="14.0" layoutY="50.0" text="Bairro: " />
+                                    <Label layoutX="14.0" layoutY="83.0" text="Rua: " />
+                                    <Label layoutX="389.0" layoutY="50.0" text="Número: " />
+                                    <TextField fx:id="tfClienteCidade" disable="true" layoutX="198.0" layoutY="9.0" prefHeight="25.0" prefWidth="342.0" />
+                                    <TextField fx:id="tfClienteBairro" disable="true" layoutX="69.0" layoutY="45.0" prefHeight="25.0" prefWidth="311.0" />
+                                    <TextField fx:id="tfClienteRua" disable="true" layoutX="48.0" layoutY="78.0" prefHeight="25.0" prefWidth="494.0" />
+                                    <TextField fx:id="tfClienteNumero" disable="true" layoutX="462.0" layoutY="45.0" prefHeight="25.0" prefWidth="78.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane collapsible="false" layoutY="277.0" prefHeight="110.0" prefWidth="558.0" text="Pessoa Física">
+                          <content>
+                            <AnchorPane fx:id="apClientePessoaFisica" minHeight="0.0" minWidth="0.0" prefHeight="80.0" prefWidth="556.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Nome: " />
+                                    <TextField fx:id="tfClienteNome" disable="true" layoutX="61.0" layoutY="9.0" prefHeight="25.0" prefWidth="239.0" />
+                                    <TextField fx:id="tfClienteCpf" disable="true" layoutX="47.0" layoutY="45.0" prefHeight="25.0" prefWidth="120.0" promptText="***.***.***-**" />
+                                    <Label layoutX="14.0" layoutY="50.0" text="CPF: " />
+                                    <Label layoutX="181.0" layoutY="50.0" text="Data de Nascimento: " />
+                                    <DatePicker fx:id="dpClienteDataNascimento" disable="true" layoutX="323.0" layoutY="45.0" prefHeight="25.0" prefWidth="120.0" />
+                                    <Label layoutX="314.0" layoutY="14.0" text="Sexo: " />
+                                    <RadioButton fx:id="rbClienteSexoMasculino" disable="true" layoutX="355.0" layoutY="13.0" mnemonicParsing="false" text="Masculino">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="tgClienteSexo" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="rbClienteSexoFeminino" disable="true" layoutX="450.0" layoutY="13.0" mnemonicParsing="false" text="Feminino" toggleGroup="$tgClienteSexo" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Button fx:id="bClienteNovo" layoutX="5.0" layoutY="500.0" mnemonicParsing="false" onAction="#clienteNovo" prefWidth="77.0" text="Novo" />
+                        <Button fx:id="bClienteLimpar" disable="true" layoutX="165.0" layoutY="500.0" mnemonicParsing="false" onAction="#clienteLimpar" prefWidth="77.0" text="Limpar" />
+                        <Button fx:id="bClienteSair" layoutX="485.0" layoutY="500.0" mnemonicParsing="false" onAction="#sair" prefWidth="67.0" text="Sair" />
+                        <TitledPane collapsible="false" layoutY="387.0" prefHeight="67.0" prefWidth="558.0" text="Outros">
+                           <content>
+                              <AnchorPane fx:id="apClienteOutros" minHeight="0.0" minWidth="0.0" prefHeight="84.0" prefWidth="556.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Limite de Credito: " />
+                                    <TextField fx:id="tfClienteLimiteCredito" disable="true" layoutX="135.0" layoutY="11.0" prefHeight="25.0" prefWidth="140.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <Button fx:id="bClienteSalvar" disable="true" layoutX="245.0" layoutY="500.0" mnemonicParsing="false" onAction="#clienteSalvar" prefWidth="77.0" text="Salvar" />
+                        <Button fx:id="bClienteEditar" layoutX="85.0" layoutY="500.0" mnemonicParsing="false" onAction="#clienteEditar" prefWidth="77.0" text="Editar" />
+                        <TitledPane collapsible="false" prefHeight="67.0" prefWidth="558.0" text="Id">
+                           <content>
+                              <AnchorPane fx:id="apClienteId" minHeight="0.0" minWidth="0.0" prefHeight="78.0" prefWidth="343.0">
+                                 <children>
+                                    <TextField fx:id="tfClienteId" disable="true" layoutX="34.0" layoutY="9.0" prefHeight="25.0" prefWidth="90.0" />
+                                    <Label layoutX="13.0" layoutY="13.0" text="Id: " />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <Button fx:id="bClienteCancelar" disable="true" layoutX="325.0" layoutY="500.0" mnemonicParsing="false" onAction="#clienteCancelar" prefWidth="77.0" text="Cancelar" />
+                        <Button fx:id="bClienteExcluir" disable="true" layoutX="405.0" layoutY="500.0" mnemonicParsing="false" onAction="#clienteExcluir" prefWidth="77.0" text="Excluir" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tFornecedor" text="Fornecedor">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TitledPane collapsible="false" layoutY="67.0" prefHeight="67.0" prefWidth="558.0" text="Contato">
+                           <content>
+                              <AnchorPane fx:id="apFornecedorContato" minHeight="0.0" minWidth="0.0" prefHeight="78.0" prefWidth="343.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Email: " />
+                                    <Label layoutX="301.0" layoutY="14.0" text="Telefone: " />
+                                    <TextField fx:id="tfFornecedorEmail" disable="true" layoutX="69.0" layoutY="9.0" prefHeight="25.0" prefWidth="222.0" />
+                                    <TextField fx:id="tfFornecedorTelefone" disable="true" layoutX="366.0" layoutY="9.0" promptText="(**) *****-****" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane collapsible="false" layoutY="134.0" prefHeight="143.0" prefWidth="558.0" text="Endereço">
+                           <content>
+                              <AnchorPane fx:id="apFornecedorEndereco" minHeight="0.0" minWidth="0.0" prefHeight="132.0" prefWidth="556.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="UF: " />
+                                    <ComboBox fx:id="cbFornecedorUf" disable="true" layoutX="40.0" layoutY="9.0" prefHeight="25.0" prefWidth="75.0" />
+                                    <Label layoutX="134.0" layoutY="14.0" text="Cidade: " />
+                                    <Label layoutX="14.0" layoutY="50.0" text="Bairro: " />
+                                    <Label layoutX="14.0" layoutY="83.0" text="Rua: " />
+                                    <Label layoutX="389.0" layoutY="50.0" text="Número: " />
+                                    <TextField fx:id="tfFornecedorCidade" disable="true" layoutX="198.0" layoutY="9.0" prefHeight="25.0" prefWidth="342.0" />
+                                    <TextField fx:id="tfFornecedorBairro" disable="true" layoutX="69.0" layoutY="45.0" prefHeight="25.0" prefWidth="311.0" />
+                                    <TextField fx:id="tfFornecedorRua" disable="true" layoutX="48.0" layoutY="78.0" prefHeight="25.0" prefWidth="494.0" />
+                                    <TextField fx:id="tfFornecedorNumero" disable="true" layoutX="462.0" layoutY="45.0" prefHeight="25.0" prefWidth="78.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane collapsible="false" layoutY="387.0" prefHeight="67.0" prefWidth="558.0" text="Outros">
+                           <content>
+                              <AnchorPane fx:id="apFornecedorOutros" minHeight="0.0" minWidth="0.0" prefHeight="90.0" prefWidth="556.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Ramo de Atividade: " />
+                                    <TextField fx:id="tfFornecedorRamoAtividade" disable="true" layoutX="147.0" layoutY="7.0" prefHeight="25.0" prefWidth="393.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <Button fx:id="bFornecedorSair" layoutX="485.0" layoutY="500.0" mnemonicParsing="false" onAction="#sair" prefWidth="67.0" text="Sair" />
+                        <Button fx:id="bFornecedorLimpar" disable="true" layoutX="165.0" layoutY="500.0" mnemonicParsing="false" onAction="#fornecedorLimpar" prefWidth="77.0" text="Limpar" />
+                        <Button fx:id="bFornecedorNovo" layoutX="5.0" layoutY="500.0" mnemonicParsing="false" onAction="#fornecedorNovo" prefWidth="77.0" text="Novo" />
+                        <TitledPane collapsible="false" layoutY="277.0" prefHeight="110.0" prefWidth="558.0" text="Pessoa Jurídica">
+                           <content>
+                              <AnchorPane fx:id="apFornecedorPessoaJuridica" minHeight="0.0" minWidth="0.0" prefHeight="80.0" prefWidth="556.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Razão Social: " />
+                                    <TextField fx:id="tfFornecedorRazaoSocial" disable="true" layoutX="106.0" layoutY="9.0" prefHeight="25.0" prefWidth="224.0" />
+                                    <TextField fx:id="tfFornecedorCnpj" disable="true" layoutX="391.0" layoutY="9.0" prefHeight="25.0" prefWidth="152.0" promptText="**.***.***/****-**" />
+                                    <Label layoutX="345.0" layoutY="14.0" text="CNPJ: " />
+                                    <TextField fx:id="tfFornecedorNomeFantasia" disable="true" layoutX="121.0" layoutY="42.0" prefHeight="25.0" prefWidth="422.0" />
+                                    <Label layoutX="14.0" layoutY="47.0" text="Nome Fantasia: " />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <Button fx:id="bFornecedorEditar" layoutX="85.0" layoutY="500.0" mnemonicParsing="false" onAction="#fornecedorEditar" prefWidth="77.0" text="Editar" />
+                        <Button fx:id="bFornecedorSalvar" disable="true" layoutX="245.0" layoutY="500.0" mnemonicParsing="false" onAction="#fornecedorSalvar" prefWidth="77.0" text="Salvar" />
+                        <TitledPane collapsible="false" prefHeight="67.0" prefWidth="558.0" text="Id">
+                           <content>
+                              <AnchorPane fx:id="apFornecedorId" minHeight="0.0" minWidth="0.0" prefHeight="78.0" prefWidth="343.0">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="13.0" text="Id: " />
+                                    <TextField fx:id="tfFornecedorId" disable="true" layoutX="34.0" layoutY="9.0" prefHeight="25.0" prefWidth="90.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <Button fx:id="bFornecedorCancelar" disable="true" layoutX="325.0" layoutY="500.0" mnemonicParsing="false" onAction="#fornecedorCancelar" prefWidth="77.0" text="Cancelar" />
+                        <Button fx:id="bFornecedorExcluir" disable="true" layoutX="405.0" layoutY="500.0" mnemonicParsing="false" onAction="#fornecedorExcluir" prefWidth="77.0" text="Excluir" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tfuncionario" text="Funcionario">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="474.0" prefWidth="558.0">
+                     <children>
+                        <TitledPane collapsible="false" layoutY="67.0" prefHeight="67.0" prefWidth="558.0" text="Contato">
+                           <content>
+                              <AnchorPane fx:id="apFuncionarioContato" minHeight="0.0" minWidth="0.0" prefHeight="78.0" prefWidth="343.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Email: " />
+                                    <Label layoutX="301.0" layoutY="14.0" text="Telefone: " />
+                                    <TextField fx:id="tfFuncionarioEmail" disable="true" layoutX="69.0" layoutY="9.0" prefHeight="25.0" prefWidth="222.0" />
+                                    <TextField fx:id="tfFuncionarioTelefone" disable="true" layoutX="366.0" layoutY="9.0" promptText="(**) *****-****" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane collapsible="false" layoutY="134.0" prefHeight="143.0" prefWidth="558.0" text="Endereço">
+                           <content>
+                              <AnchorPane fx:id="apFuncionarioEndereco" minHeight="0.0" minWidth="0.0" prefHeight="132.0" prefWidth="556.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="UF: " />
+                                    <ComboBox fx:id="cbFuncionarioUf" disable="true" layoutX="40.0" layoutY="9.0" prefHeight="25.0" prefWidth="75.0" />
+                                    <Label layoutX="134.0" layoutY="14.0" text="Cidade: " />
+                                    <Label layoutX="14.0" layoutY="50.0" text="Bairro: " />
+                                    <Label layoutX="14.0" layoutY="83.0" text="Rua: " />
+                                    <Label layoutX="389.0" layoutY="50.0" text="Número: " />
+                                    <TextField fx:id="tfFuncionarioCidade" disable="true" layoutX="198.0" layoutY="9.0" prefHeight="25.0" prefWidth="342.0" />
+                                    <TextField fx:id="tfFuncionarioBairro" disable="true" layoutX="69.0" layoutY="45.0" prefHeight="25.0" prefWidth="311.0" />
+                                    <TextField fx:id="tfFuncionarioRua" disable="true" layoutX="48.0" layoutY="78.0" prefHeight="25.0" prefWidth="494.0" />
+                                    <TextField fx:id="tfFuncionarioNumero" disable="true" layoutX="462.0" layoutY="45.0" prefHeight="25.0" prefWidth="78.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane collapsible="false" layoutY="387.0" prefHeight="100.0" prefWidth="558.0" text="Outros">
+                           <content>
+                              <AnchorPane fx:id="apFuncionarioOutros" minHeight="0.0" minWidth="0.0" prefHeight="58.0" prefWidth="556.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Cargo: " />
+                                    <TextField fx:id="tfFuncionarioCargo" disable="true" layoutX="62.0" layoutY="9.0" prefHeight="25.0" prefWidth="478.0" />
+                                    <Label layoutX="14.0" layoutY="45.0" text="Carga Horária: " />
+                                    <TextField fx:id="tfFuncionarioCargaHoraria" disable="true" layoutX="114.0" layoutY="40.0" prefHeight="25.0" prefWidth="92.0" promptText="** Horas" />
+                                    <Label layoutX="222.0" layoutY="45.0" text="Salário: " />
+                                    <TextField fx:id="tfFuncionarioSalario" disable="true" layoutX="276.0" layoutY="40.0" prefHeight="25.0" prefWidth="104.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <Button fx:id="bFuncionarioSair" layoutX="485.0" layoutY="500.0" mnemonicParsing="false" onAction="#sair" prefWidth="67.0" text="Sair" />
+                        <Button fx:id="bFuncionarioLimpar" disable="true" layoutX="165.0" layoutY="500.0" mnemonicParsing="false" onAction="#funcionarioLimpar" prefWidth="77.0" text="Limpar" />
+                        <Button fx:id="bFuncionarioNovo" layoutX="5.0" layoutY="500.0" mnemonicParsing="false" onAction="#funcionarioNovo" prefWidth="77.0" text="Novo" />
+                        <TitledPane collapsible="false" layoutY="277.0" prefHeight="110.0" prefWidth="558.0" text="Pessoa Física">
+                           <content>
+                              <AnchorPane fx:id="apFuncionarioPessoaFisica" minHeight="0.0" minWidth="0.0" prefHeight="80.0" prefWidth="556.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Nome: " />
+                                    <TextField fx:id="tfFuncionarioNome" disable="true" layoutX="61.0" layoutY="9.0" prefHeight="25.0" prefWidth="239.0" />
+                                    <TextField fx:id="tfFuncionarioCpf" disable="true" layoutX="47.0" layoutY="45.0" prefHeight="25.0" prefWidth="120.0" promptText="***.***.***-**" />
+                                    <Label layoutX="14.0" layoutY="50.0" text="CPF: " />
+                                    <Label layoutX="181.0" layoutY="50.0" text="Data de Nascimento: " />
+                                    <DatePicker fx:id="dpFuncionarioDataNascimento" disable="true" layoutX="323.0" layoutY="45.0" prefHeight="25.0" prefWidth="120.0" />
+                                    <Label layoutX="314.0" layoutY="14.0" text="Sexo: " />
+                                    <RadioButton fx:id="rbFuncionarioSexoMasculino" disable="true" layoutX="355.0" layoutY="13.0" mnemonicParsing="false" text="Masculino">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="tgFuncionarioSexo" />
+                                       </toggleGroup></RadioButton>
+                                    <RadioButton fx:id="rbFuncionarioSexoFeminino" disable="true" layoutX="450.0" layoutY="13.0" mnemonicParsing="false" text="Feminino" toggleGroup="$tgFuncionarioSexo" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <Button fx:id="bFuncionarioSalvar" disable="true" layoutX="245.0" layoutY="500.0" mnemonicParsing="false" onAction="#funcionarioSalvar" prefWidth="77.0" text="Salvar" />
+                        <Button fx:id="bFuncionarioEditar" layoutX="85.0" layoutY="500.0" mnemonicParsing="false" onAction="#funcionarioEditar" prefWidth="77.0" text="Editar" />
+                        <TitledPane collapsible="false" prefHeight="67.0" prefWidth="558.0" text="Id">
+                           <content>
+                              <AnchorPane fx:id="apFuncionarioId" minHeight="0.0" minWidth="0.0" prefHeight="78.0" prefWidth="343.0">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="13.0" text="Id: " />
+                                    <TextField fx:id="tfFuncionarioId" disable="true" layoutX="34.0" layoutY="9.0" prefHeight="25.0" prefWidth="90.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <Button fx:id="bFuncionarioCancelar" disable="true" layoutX="325.0" layoutY="500.0" mnemonicParsing="false" onAction="#funcionarioCancelar" prefWidth="77.0" text="Cancelar" />
+                        <Button fx:id="bFuncionarioExcluir" disable="true" layoutX="405.0" layoutY="500.0" mnemonicParsing="false" onAction="#funcionarioExcluir" prefWidth="77.0" text="Excluir" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tProduto" text="Produto">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="368.0" prefWidth="558.0">
+                     <children>
+                        <TitledPane animated="false" collapsible="false" layoutY="67.0" prefHeight="98.0" prefWidth="558.0" text="Sobre">
+                          <content>
+                            <AnchorPane fx:id="apProdutosInformacoes" minHeight="0.0" minWidth="0.0" prefHeight="95.0" prefWidth="556.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Nome: " />
+                                    <Label layoutX="14.0" layoutY="45.0" text="Marca: " />
+                                    <TextField fx:id="tfProdutoNome" disable="true" layoutX="61.0" layoutY="9.0" prefHeight="25.0" prefWidth="476.0" />
+                                    <TextField fx:id="tfProdutoMarca" disable="true" layoutX="61.0" layoutY="40.0" prefHeight="25.0" prefWidth="474.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <TitledPane animated="false" collapsible="false" layoutY="165.0" prefHeight="97.0" prefWidth="558.0" text="Valores">
+                          <content>
+                            <AnchorPane fx:id="apProdutosValores" minHeight="0.0" minWidth="0.0" prefHeight="147.0" prefWidth="556.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Valor de Compra: " />
+                                    <Label layoutX="278.0" layoutY="14.0" text="Valor de Venda: " />
+                                    <Label layoutX="14.0" layoutY="45.0" text="Valor de Promoção: " />
+                                    <TextField fx:id="tfProdutoValorCompra" disable="true" layoutX="133.0" layoutY="9.0" prefHeight="25.0" prefWidth="130.0" />
+                                    <TextField fx:id="tfProdutoValorVenda" disable="true" layoutX="397.0" layoutY="9.0" prefHeight="25.0" prefWidth="130.0" />
+                                    <TextField fx:id="tfProdutoValorPromocao" disable="true" layoutX="146.0" layoutY="40.0" prefHeight="25.0" prefWidth="138.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <Button fx:id="bProdutoSair" layoutX="485.0" layoutY="500.0" mnemonicParsing="false" onAction="#sair" prefWidth="67.0" text="Sair" />
+                        <Button fx:id="bProdutoLimpar" disable="true" layoutX="165.0" layoutY="500.0" mnemonicParsing="false" onAction="#produtoLimpar" prefWidth="77.0" text="Limpar" />
+                        <Button fx:id="bProdutoNovo" layoutX="5.0" layoutY="500.0" mnemonicParsing="false" onAction="#produtoNovo" prefWidth="77.0" text="Novo" />
+                        <Button fx:id="bProdutoSalvar" disable="true" layoutX="245.0" layoutY="500.0" mnemonicParsing="false" onAction="#produtoSalvar" prefWidth="77.0" text="Salvar" />
+                        <Button fx:id="bProdutoEditar" layoutX="85.0" layoutY="500.0" mnemonicParsing="false" onAction="#produtoEditar" prefWidth="77.0" text="Editar" />
+                        <TitledPane collapsible="false" prefHeight="67.0" prefWidth="558.0" text="Id">
+                           <content>
+                              <AnchorPane fx:id="apProdutoId" minHeight="0.0" minWidth="0.0" prefHeight="78.0" prefWidth="343.0">
+                                 <children>
+                                    <Label layoutX="13.0" layoutY="13.0" text="Id: " />
+                                    <TextField fx:id="tfProdutoId" disable="true" layoutX="34.0" layoutY="9.0" prefHeight="25.0" prefWidth="90.0" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </TitledPane>
+                        <Button fx:id="bProdutoCancelar" disable="true" layoutX="325.0" layoutY="500.0" mnemonicParsing="false" onAction="#produtoCancelar" prefWidth="77.0" text="Cancelar" />
+                        <Button fx:id="bProdutoExcluir" disable="true" layoutX="405.0" layoutY="500.0" mnemonicParsing="false" onAction="#produtoExcluir" prefWidth="77.0" text="Excluir" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
